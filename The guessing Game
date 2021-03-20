@@ -1,0 +1,97 @@
+// Name:Navpreet Kaur
+// Student ID: 201906213
+// Date Submitted:19 March, 2021
+// Class IN2203 - G2
+// Name of work: Assignment 1: The Gambling Game
+package nav;
+
+import java.util.Scanner;
+
+public class new_game {
+	
+
+		  
+	    // Function that implements the 
+	    // number guessing game 
+	    public static void
+	    guessingNumberGame() 
+	    { 
+	        // Scanner Class 
+	        Scanner sc = new Scanner(System.in); 
+	  
+	        // Generate the numbers 
+	        int number = 1 + (int)(100
+	                               * Math.random()); 
+	        //System.out.print(number);
+	  
+	        // Given K trials 
+	        int K = 5; 
+	  
+	        int i, guess; 
+	  
+	        System.out.println( 
+	            "A number is chosen"
+	            + " between 1 to 100."+ "Guess the number"
+	            + " within 5 trials."); 
+	        
+	        // Interate over K Trials 
+	        for (i = 0; i < K; i++) { 
+	  
+	            System.out.println( 
+	                "Guess the number:"); 
+	  
+	            // Take input for guessing 
+	            guess = sc.nextInt(); 
+	  
+	            // If the number is guessed 
+	            if (number == guess) { 
+	                System.out.println( 
+	                    "Congratulations!"
+	                    + " You guessed the number."); 
+	                
+	                
+	                
+	                
+	            } 
+	            else if (number > guess 
+	                     && i != K - 1) { 
+	                System.out.println( 
+	                    "computer wins " + "your guess is too low" + guess); 
+	            } 
+	            else if (number < guess 
+	                     && i != K - 1) { 
+	                System.out.println( 
+	                    "computer wins" + "your guess is too high" +guess); 
+	            } 
+	        } 
+	  
+	        if (i == K) { 
+	            System.out.println( 
+	                "You have exhausted"
+	                + " 5 trials."); 
+	  
+	            System.out.println( 
+	                "The number was " + number); 
+	        } 
+	    } 
+	  
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String reply , ans = null;
+		Scanner s = new Scanner (System.in);
+		
+		System.out.print("You are invited to play !");
+		System.out.println("Type Yes or No to continue GAME");
+		reply=s.next("yes");
+		
+		if (ans==reply);
+		{
+			// Function Call 
+	        guessingNumberGame();
+		}
+		
+	}
+
+}
